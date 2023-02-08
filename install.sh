@@ -219,7 +219,7 @@ cd ${NODEHOME} &&
 sed -i "s/- '8080:8080'/- '$DASHPORT:$DASHPORT'/" docker-compose.yml &&
 sed -i "s/- '9001-9010:9001-9010'/- '$SHMEXT:$SHMEXT'/" docker-compose.yml &&
 sed -i "s/- '10001-10010:10001-10010'/- '$SHMINT:$SHMEXT'/" docker-compose.yml &&
-sed -i "s/- '3001-3001:3001-3001'/- '$RDPORT:$RDPORT'/" docker-compose.yml &&
+sed -i "s/- '3001:3001'/- '$RDPORT:$RDPORT'/" docker-compose.yml &&
 ./docker-up.sh
 
 echo "Starting image. This could take a while..."
